@@ -1,0 +1,14 @@
+A0 = 10; 
+f = 2; 
+L = 0.4;
+t = 0:0.01:5;
+A = A0 * exp(-L * t);
+x = A .* sin(2 * pi * f * t);
+figure;
+plot(t, x, 'b-', 'DisplayName', 'Απομάκρυνση x(t)'); 
+hold on;
+plot(t, A, 'k--', 'DisplayName', 'Πλάτος A(t)'); 
+hold off;
+xlabel('Χρόνος (t)');
+ylim([-10, 10]);
+legend('show');
